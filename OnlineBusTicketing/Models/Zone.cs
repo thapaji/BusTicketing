@@ -7,8 +7,8 @@ namespace OnlineBusTicketing.Models
 {
     public class Zone
     {
-        public int id { get; set; }
-        public String name { get; set; }
-
+        public int ZoneId { get; set; }
+        public String Name { get; set; }
+        public virtual ICollection<District> Districts { get; set; }
     }
 }

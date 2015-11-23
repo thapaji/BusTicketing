@@ -5,9 +5,9 @@ using System.Web;
 
 namespace OnlineBusTicketing.Models
 {
-    public class CustomerModel
+    public class Customer
     {
-        public int id { get; set; }
-        public String name { get; set; }
+        public int CustomerId { get; set; }
+        public String Name { get; set; }
     }
 }

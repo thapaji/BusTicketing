@@ -2,16 +2,16 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using System.ComponentModel.DataAnnotations;
 
 namespace OnlineBusTicketing.Models
 {
     public class TicketingDetail
     {
-        public int id { get; set; }
-        public TicketingModel ticket_id { get; set; }
-        public CustomerModel person_name { get; set; }
-        public CityModel from_station_id { get; set; }
-        public CityModel to_station_id { get; set; }
-        public RouteModel price { get; set; }
+        [Key]
+        public int TicketingDetailId { get; set; }
+        public String Name { get; set; }
+        public int TicketingId { get; set; }
+        public virtual Ticketing Ticketing { get; set; }
     }
 }
