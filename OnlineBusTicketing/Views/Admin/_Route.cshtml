@@ -1,0 +1,39 @@
+﻿@model IEnumerable<OnlineBusTicketing.Models.Route>
+
+<p>
+    @Html.ActionLink("Create New", "CreateRoute")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.FromCity.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ToCity.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Price)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.FromCity.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ToCity.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Price)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.RouteId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.RouteId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.RouteId })
+        </td>
+    </tr>
+}
+
+</table>

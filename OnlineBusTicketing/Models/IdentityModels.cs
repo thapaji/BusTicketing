@@ -13,5 +13,11 @@ namespace OnlineBusTicketing.Models
             : base("DefaultConnection")
         {
         }
+
+        public System.Data.Entity.DbSet<OnlineBusTicketing.Models.Ticketing> Ticketings { get; set; }
+
+        public System.Data.Entity.DbSet<OnlineBusTicketing.Models.City> Cities { get; set; }
+
+        public System.Data.Entity.DbSet<OnlineBusTicketing.Models.Route> Routes { get; set; }
     }
 }
