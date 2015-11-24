@@ -16,7 +16,9 @@ namespace OnlineBusTicketing.Migrations
 
         protected override void Seed(OnlineBusTicketing.Models.DAL.DataContext context)
         {
-            var zones = new List<Zone>{
+            if (!context.Zone.Any())
+            {
+                var zones = new List<Zone>{
                 new Zone{Name="Mechi"},
                 new Zone{Name="Koshi"},
                 new Zone{Name="Sagarmatha"},
@@ -32,11 +34,12 @@ namespace OnlineBusTicketing.Migrations
                 new Zone{Name="Seti"},
                 new Zone{Name="Mahakali"}
             };
-            foreach (Zone zone in zones)
-            {
-                context.Zone.Add(zone);
+                foreach (Zone zone in zones)
+                {
+                    context.Zone.Add(zone);
+                }
+                context.SaveChanges();
             }
-            context.SaveChanges();
         }
     }
 }

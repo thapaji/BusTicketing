@@ -2,11 +2,14 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace OnlineBusTicketing.Models
 {
     public class Bus
     {
+        [Column("bus_id")]
         public int BusId { get; set; }
         public String NoPlate { get; set; }
         public int NoOfSeatsA { get; set; }
