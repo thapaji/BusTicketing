@@ -1,4 +1,5 @@
-﻿using System;
+﻿using OnlineBusTicketing.Models.DAL;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -8,6 +9,7 @@ namespace OnlineBusTicketing.Controllers
 {
     public class HomeController : Controller
     {
+        private DataContext dataContext = new DataContext();
         public ActionResult Index()
         {
             return View();

@@ -167,6 +167,10 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201511240250142_DatabaseChanges.cs" />
+    <Compile Include="Migrations\201511240250142_DatabaseChanges.Designer.cs">
+      <DependentUpon>201511240250142_DatabaseChanges.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Bus.cs" />
@@ -174,6 +178,7 @@
     <Compile Include="Models\Company.cs" />
     <Compile Include="Models\Customer.cs" />
     <Compile Include="Models\DAL\DataContext.cs" />
+    <Compile Include="Models\DAL\MasterDatabaseInitializer.cs" />
     <Compile Include="Models\Departure.cs" />
     <Compile Include="Models\District.cs" />
     <Compile Include="Models\Role.cs" />
@@ -246,6 +251,11 @@
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="packages.config" />
     <None Include="Project_Readme.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201511240250142_DatabaseChanges.resx">
+      <DependentUpon>201511240250142_DatabaseChanges.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

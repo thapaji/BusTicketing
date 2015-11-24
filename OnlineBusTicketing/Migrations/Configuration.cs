@@ -1,6 +1,8 @@
 namespace OnlineBusTicketing.Migrations
 {
+    using OnlineBusTicketing.Models;
     using System;
+    using System.Collections.Generic;
     using System.Data.Entity;
     using System.Data.Entity.Migrations;
     using System.Linq;
@@ -9,23 +11,32 @@ namespace OnlineBusTicketing.Migrations
     {
         public Configuration()
         {
-            AutomaticMigrationsEnabled = false;
+            AutomaticMigrationsEnabled = true;
         }
 
         protected override void Seed(OnlineBusTicketing.Models.DAL.DataContext context)
         {
-            //  This method will be called after migrating to the latest version.
-
-            //  You can use the DbSet<T>.AddOrUpdate() helper extension method 
-            //  to avoid creating duplicate seed data. E.g.
-            //
-            //    context.People.AddOrUpdate(
-            //      p => p.FullName,
-            //      new Person { FullName = "Andrew Peters" },
-            //      new Person { FullName = "Brice Lambson" },
-            //      new Person { FullName = "Rowan Miller" }
-            //    );
-            //
+            var zones = new List<Zone>{
+                new Zone{Name="Mechi"},
+                new Zone{Name="Koshi"},
+                new Zone{Name="Sagarmatha"},
+                new Zone{Name="Janakpur"},
+                new Zone{Name="Bagmati"},
+                new Zone{Name="Narayani"},
+                new Zone{Name="Lumbini"},
+                new Zone{Name="Gandaki"},
+                new Zone{Name="Karnali"},
+                new Zone{Name="Dahulagiri"},
+                new Zone{Name="Rapti"},
+                new Zone{Name="Bheri"},
+                new Zone{Name="Seti"},
+                new Zone{Name="Mahakali"}
+            };
+            foreach (Zone zone in zones)
+            {
+                context.Zone.Add(zone);
+            }
+            context.SaveChanges();
         }
     }
 }

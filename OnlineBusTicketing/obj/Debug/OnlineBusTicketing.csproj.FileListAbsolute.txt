@@ -50,7 +50,8 @@ D:\dotNet\OnlineBusTicketing\OnlineBusTicketing\bin\Microsoft.Owin.Security.OAut
 D:\dotNet\OnlineBusTicketing\OnlineBusTicketing\bin\Microsoft.Owin.Security.Google.xml
 D:\dotNet\OnlineBusTicketing\OnlineBusTicketing\bin\Microsoft.Owin.Security.Twitter.xml
 D:\dotNet\OnlineBusTicketing\OnlineBusTicketing\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+D:\dotNet\OnlineBusTicketing\OnlineBusTicketing\obj\Debug\OnlineBusTicketing.Migrations.DatabaseChanges.resources
+D:\dotNet\OnlineBusTicketing\OnlineBusTicketing\obj\Debug\OnlineBusTicketing.csproj.GenerateResource.Cache
 D:\dotNet\OnlineBusTicketing\OnlineBusTicketing\obj\Debug\OnlineBusTicketing.dll
 D:\dotNet\OnlineBusTicketing\OnlineBusTicketing\obj\Debug\OnlineBusTicketing.pdb
-D:\dotNet\OnlineBusTicketing\OnlineBusTicketing\bin\OnlineBusTicketing.dll.CodeAnalysisLog.xml
-D:\dotNet\OnlineBusTicketing\OnlineBusTicketing\bin\OnlineBusTicketing.dll.lastcodeanalysissucceeded
+D:\dotNet\OnlineBusTicketing\OnlineBusTicketing\obj\Debug\OnlineBusTicketing.csprojResolveAssemblyReference.cache
