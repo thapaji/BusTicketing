@@ -7,6 +7,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace OnlineBusTicketing.Models
 {
+    [Table("tbl_zone")]
     public class Zone
     {
         [Column("zone_id")]
