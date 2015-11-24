@@ -27,6 +27,8 @@ D:\dotNet\OnlineBusTicketing\OnlineBusTicketing\bin\System.Web.WebPages.Deployme
 D:\dotNet\OnlineBusTicketing\OnlineBusTicketing\bin\System.Web.WebPages.dll
 D:\dotNet\OnlineBusTicketing\OnlineBusTicketing\bin\System.Web.WebPages.Razor.dll
 D:\dotNet\OnlineBusTicketing\OnlineBusTicketing\bin\WebGrease.dll
+D:\dotNet\OnlineBusTicketing\OnlineBusTicketing\bin\EntityFramework.xml
+D:\dotNet\OnlineBusTicketing\OnlineBusTicketing\bin\EntityFramework.SqlServer.xml
 D:\dotNet\OnlineBusTicketing\OnlineBusTicketing\bin\System.Web.Helpers.xml
 D:\dotNet\OnlineBusTicketing\OnlineBusTicketing\bin\System.Web.Mvc.xml
 D:\dotNet\OnlineBusTicketing\OnlineBusTicketing\bin\System.Web.Optimization.xml
@@ -36,8 +38,6 @@ D:\dotNet\OnlineBusTicketing\OnlineBusTicketing\bin\System.Web.WebPages.Deployme
 D:\dotNet\OnlineBusTicketing\OnlineBusTicketing\bin\System.Web.WebPages.Razor.xml
 D:\dotNet\OnlineBusTicketing\OnlineBusTicketing\bin\Newtonsoft.Json.xml
 D:\dotNet\OnlineBusTicketing\OnlineBusTicketing\bin\Antlr3.Runtime.pdb
-D:\dotNet\OnlineBusTicketing\OnlineBusTicketing\bin\EntityFramework.xml
-D:\dotNet\OnlineBusTicketing\OnlineBusTicketing\bin\EntityFramework.SqlServer.xml
 D:\dotNet\OnlineBusTicketing\OnlineBusTicketing\bin\Microsoft.AspNet.Identity.Core.xml
 D:\dotNet\OnlineBusTicketing\OnlineBusTicketing\bin\Microsoft.AspNet.Identity.Owin.xml
 D:\dotNet\OnlineBusTicketing\OnlineBusTicketing\bin\Microsoft.AspNet.Identity.EntityFramework.xml
@@ -50,6 +50,7 @@ D:\dotNet\OnlineBusTicketing\OnlineBusTicketing\bin\Microsoft.Owin.Security.OAut
 D:\dotNet\OnlineBusTicketing\OnlineBusTicketing\bin\Microsoft.Owin.Security.Google.xml
 D:\dotNet\OnlineBusTicketing\OnlineBusTicketing\bin\Microsoft.Owin.Security.Twitter.xml
 D:\dotNet\OnlineBusTicketing\OnlineBusTicketing\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
-D:\dotNet\OnlineBusTicketing\OnlineBusTicketing\obj\Debug\OnlineBusTicketing.csprojResolveAssemblyReference.cache
 D:\dotNet\OnlineBusTicketing\OnlineBusTicketing\obj\Debug\OnlineBusTicketing.dll
 D:\dotNet\OnlineBusTicketing\OnlineBusTicketing\obj\Debug\OnlineBusTicketing.pdb
+D:\dotNet\OnlineBusTicketing\OnlineBusTicketing\bin\OnlineBusTicketing.dll.CodeAnalysisLog.xml
+D:\dotNet\OnlineBusTicketing\OnlineBusTicketing\bin\OnlineBusTicketing.dll.lastcodeanalysissucceeded
