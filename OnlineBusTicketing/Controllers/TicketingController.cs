@@ -1,4 +1,5 @@
-﻿using System;
+﻿using OnlineBusTicketing.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -10,7 +11,7 @@ namespace OnlineBusTicketing.Controllers
     {
         public ActionResult Index()
         {
-            return View();
+            return View(new Departure());
         }
 	}
 }
