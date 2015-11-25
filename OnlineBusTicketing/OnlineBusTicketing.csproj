@@ -238,9 +238,9 @@
     <Content Include="Views\Account\Manage.cshtml" />
     <Content Include="Views\Account\Register.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
-    <Content Include="Views\Ticketing\Index.cshtml" />
     <Content Include="Views\Admin\_Route.cshtml" />
     <Content Include="Views\Admin\_CreateRoute.cshtml" />
+    <Content Include="Views\Ticketing\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -1,57 +1,47 @@
-﻿@model OnlineBusTicketing.Models.Ticketing
-
-@{
-    ViewBag.Title = "Index";
-}
-
-<h2>Index</h2>
-
-
-@using (Html.BeginForm()) 
-{
-    @Html.AntiForgeryToken()
-    
-    <div class="form-horizontal">
-        <h4>Ticketing</h4>
-        <hr />
-        @Html.ValidationSummary(true)
-
-        <div class="form-group">
-            @Html.LabelFor(model => model.NoOfSeat, new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.NoOfSeat)
-                @Html.ValidationMessageFor(model => model.NoOfSeat)
-            </div>
-        </div>
-
-        <div class="form-group">
-            @Html.LabelFor(model => model.TicketNo, new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.TicketNo)
-                @Html.ValidationMessageFor(model => model.TicketNo)
-            </div>
-        </div>
-
-        <div class="form-group">
-            @Html.LabelFor(model => model.StationId, "StationId", new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.station.Name)
-                @Html.ValidationMessageFor(model => model.StationId)
-            </div>
-        </div>
-
-        <div class="form-group">
-            <div class="col-md-offset-2 col-md-10">
-                <input type="submit" value="Create" class="btn btn-default" />
-            </div>
-        </div>
-    </div>
-}
-
-<div>
-    @Html.ActionLink("Back to List", "Index")
+﻿@model OnlineBusTicketing.Models.Route
+<div class="jumbotron">
+    <p>
+        @Html.ActionLink("Create New", "Create")
+    </p>
+    <p>
+        @Html.Label("From : ")
+        @Html.TextBox(name: "from")
+        @Html.Label("To : ")
+        @Html.TextBox(name: "to")
+        <input type="button" value="Search" />
+    </p>
 </div>
+@*<table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.FromCity.Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ToCity.Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Price)
+            </th>
+            <th></th>
+        </tr>
 
-@section Scripts {
-    @Scripts.Render("~/bundles/jqueryval")
-}
+    @foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.FromCity.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ToCity.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Price)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id=item.RouteId }) |
+                @Html.ActionLink("Details", "Details", new { id=item.RouteId }) |
+                @Html.ActionLink("Delete", "Delete", new { id=item.RouteId })
+            </td>
+        </tr>
+    }
+
+    </table>*@
