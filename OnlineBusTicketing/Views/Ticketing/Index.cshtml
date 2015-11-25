@@ -1,31 +1,17 @@
 ﻿@model OnlineBusTicketing.Models.Departure
 @section scripts {
-
     <script type="text/javascript">
-
         $(function () {
-
             $('#DepartureDate').datetimepicker({
-
                 defaultDate: '@Model.DepartureDate',
-
                 format: 'll',
-
                 showClose: true,
-
                 showClear: true,
-
                 toolbarPlacement: 'top'
-
             });
-
         });
-
     </script>
-
 }
-
-
 <div class="jumbotron">
     <p>
         @Html.ActionLink("Create New", "Create")
@@ -39,32 +25,21 @@
     </p>
 
     <div class="form-group">
-
         @Html.LabelFor(model => model.DepartureDate,
-
         htmlAttributes: new { @class = "control-label col-md-3" })
-
         <div class="col-md-8">
-
             @Html.EditorFor(model => model.DepartureDate,
-
            new
            {
                htmlAttributes = new
                {
-
                    @Value = Model.DepartureDate.ToString("MMM/dd/yyyy"),
-
                    @class = "form-control"
                },
            })
-
             @Html.ValidationMessageFor(model => model.DepartureDate, "", new { @class = "text-danger" })
-
         </div>
-
     </div>
-
 </div>
 @*<table class="table">
         <tr>

@@ -1,11 +1,13 @@
 namespace OnlineBusTicketing.Migrations
 {
     using OnlineBusTicketing.Models;
+    using OnlineBusTicketing.Utilities;
     using System;
     using System.Collections.Generic;
     using System.Data.Entity;
     using System.Data.Entity.Migrations;
     using System.Linq;
+    using System.Security.Cryptography;
 
     internal sealed class Configuration : DbMigrationsConfiguration<OnlineBusTicketing.Models.DAL.DataContext>
     {
@@ -59,7 +61,7 @@ namespace OnlineBusTicketing.Migrations
                 new District{Name="Okhaldhunga", ZoneId=3},
                 new District{Name="Saptari", ZoneId=3},
                 new District{Name="Siraha", ZoneId=3},
-                 new District{Name="Solukhumbu", ZoneId=3},
+                new District{Name="Solukhumbu", ZoneId=3},
                 new District{Name="Udayapur", ZoneId=3},
                 new District{Name="Dhanusa", ZoneId=4},
                 new District{Name="Dholkha", ZoneId=4},
@@ -73,7 +75,7 @@ namespace OnlineBusTicketing.Migrations
                 new District{Name="Kavrepalanchok", ZoneId=5},
                 new District{Name="Lalitpur", ZoneId=5},
                 new District{Name="Nuwakot", ZoneId=5},
-                 new District{Name="Rasuwa", ZoneId=5},
+                new District{Name="Rasuwa", ZoneId=5},
                 new District{Name="Sindhupalchok", ZoneId=5},
                 new District{Name="Bara", ZoneId=6},
                 new District{Name="Chitwan", ZoneId=6},
@@ -87,7 +89,7 @@ namespace OnlineBusTicketing.Migrations
                 new District{Name="Palpa", ZoneId=7},
                 new District{Name="Rupandehi", ZoneId=7},
                 new District{Name="Gorkha", ZoneId=8},
-                 new District{Name="Kaski", ZoneId=8},
+                new District{Name="Kaski", ZoneId=8},
                 new District{Name="Lamjung", ZoneId=8},
                 new District{Name="Manang", ZoneId=8},
                 new District{Name="Syangja", ZoneId=8},
@@ -101,11 +103,11 @@ namespace OnlineBusTicketing.Migrations
                 new District{Name="Mustang", ZoneId=10},
                 new District{Name="Myagdi", ZoneId=10},
                 new District{Name="Parbat", ZoneId=10},
-                  new District{Name="Dang Deokhuri", ZoneId=11},
+                new District{Name="Dang Deokhuri", ZoneId=11},
                 new District{Name="Pyuthan", ZoneId=11},
                 new District{Name="Rolpa", ZoneId=11},
                 new District{Name="Rukum", ZoneId=11},
-                 new District{Name="Salyan", ZoneId=11},
+                new District{Name="Salyan", ZoneId=11},
                 new District{Name="Banke", ZoneId=12},
                 new District{Name="Bardiya", ZoneId=12},
                 new District{Name="Dailekh", ZoneId=12},
@@ -119,7 +121,7 @@ namespace OnlineBusTicketing.Migrations
                 new District{Name="Baitadi", ZoneId=14},
                 new District{Name="Dadeldhura", ZoneId=14},
                 new District{Name="Darchula", ZoneId=14},
-                 new District{Name="Kanchanpur", ZoneId=14}
+                new District{Name="Kanchanpur", ZoneId=14}
             
             };
                 foreach (District district in districts)
@@ -133,15 +135,31 @@ namespace OnlineBusTicketing.Migrations
             {
                 var roles = new List<Role>{
                 new Role{Name="Admin"},
-               new Role{Name="Company"},
+                new Role{Name="Company"},
                 new Role{Name="Customer"}      
-                    };
+                };
                 foreach (Role role in roles)
                 {
                     context.Role.Add(role);
                 }
                 context.SaveChanges();
-
+            }
+            if (!context.User.Any())
+            {
+                String encryptedPassword = "";
+                using (MD5 md5Hash = MD5.Create())
+                {
+                    encryptedPassword = Utility.GetMd5Hash(md5Hash, "sujan");
+                }
+                var users = new List<User>
+                {
+                    new User{Username="sujan",Password = encryptedPassword, Email="mail.thapasujan@gmail.com",RoleId=1,VerificationCode=0}
+                };
+                foreach (User user in users)
+                {
+                    context.User.Add(user);
+                }
+                context.SaveChanges();
             }
         }
     }
