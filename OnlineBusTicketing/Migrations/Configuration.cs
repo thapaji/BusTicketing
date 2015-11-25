@@ -41,10 +41,10 @@ namespace OnlineBusTicketing.Migrations
                 }
                 context.SaveChanges();
 
-
-                if (!context.District.Any())
-                {
-                    var districts = new List<District>{
+            }
+            if (!context.District.Any())
+            {
+                var districts = new List<District>{
                 new District{Name="Ilam", ZoneId=1},
                 new District{Name="Jhapa", ZoneId=1},
                 new District{Name="Panchthar", ZoneId=1},
@@ -122,29 +122,26 @@ namespace OnlineBusTicketing.Migrations
                  new District{Name="Kanchanpur", ZoneId=14}
             
             };
-                    foreach (District district in districts)
-                    {
-                        context.District.Add(district);
-                    }
-                    context.SaveChanges();
-
-
-                    if (!context.Role.Any())
-                    {
-                        var roles = new List<Role>{
-                new Role{Name="Admin"},
-                new Role{Name="Company"},
-                new Role{Name="Customer"}
-
-             };
-                        foreach (District district in districts)
-                        {
-                            context.District.Add(district);
-                        }
-                        context.SaveChanges();
-
-                    }
+                foreach (District district in districts)
+                {
+                    context.District.Add(district);
                 }
+                context.SaveChanges();
+            }
+
+            if (!context.Role.Any())
+            {
+                var roles = new List<Role>{
+                new Role{Name="Admin"},
+               new Role{Name="Company"},
+                new Role{Name="Customer"}      
+                    };
+                foreach (Role role in roles)
+                {
+                    context.Role.Add(role);
+                }
+                context.SaveChanges();
+
             }
         }
     }
