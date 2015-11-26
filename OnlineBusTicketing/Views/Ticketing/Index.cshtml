@@ -12,22 +12,36 @@
         });
     </script>
 }
-<div class="jumbotron">
-    <p>
-        @Html.ActionLink("Create New", "Create")
-    </p>
-    <p>
-        @Html.Label("From : ")
-        @Html.TextBox(name: "from")
-        @Html.Label("To : ")
-        @Html.TextBox(name: "to")
-        <input type="button" value="Search" />
-    </p>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+
+@using (Html.BeginForm("", "", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+{
+
+    @Html.AntiForgeryToken()
+    <h4>Search</h4>
+    <hr />
+    @Html.ValidationSummary(true)
+    <div class="form-group">
+        @Html.Label("From", new { @class = "col-md-2 control-label" })
+        <div class="col-md-10">
+            @Html.TextBox("from", null, new { @class = "form-control" })
+        </div>
+    </div>
+    <div class="form-group">
+        @Html.Label("To", new { @class = "col-md-2 control-label" })
+        <div class="col-md-10">
+            @Html.TextBox("to", null, new { @class = "form-control" })
+        </div>
+    </div>
+
 
     <div class="form-group">
         @Html.LabelFor(model => model.DepartureDate,
-        htmlAttributes: new { @class = "control-label col-md-3" })
-        <div class="col-md-8">
+        htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
             @Html.EditorFor(model => model.DepartureDate,
            new
            {
@@ -40,7 +54,12 @@
             @Html.ValidationMessageFor(model => model.DepartureDate, "", new { @class = "text-danger" })
         </div>
     </div>
-</div>
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+            <input type="submit" value="Search" class="btn btn-success" />
+        </div>
+    </div>
+}
 @*<table class="table">
         <tr>
             <th>
