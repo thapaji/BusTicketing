@@ -1,0 +1,54 @@
+﻿@model OnlineBusTicketing.Models.User
+
+<div class="jumbotron">
+    <div>
+        <h4>User</h4>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.Role.Name)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Role.Name)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Username)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Username)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Password)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Password)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.VerificationCode)
+            </dt>
+
+            <dd>
+                @Html.EditorFor(model => model.VerificationCode)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Email)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Email)
+            </dd>
+
+        </dl>
+    </div>
+    <p>
+        @Html.ActionLink("Edit", "Edit", new { id = Model.UserId }) |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+</div>
